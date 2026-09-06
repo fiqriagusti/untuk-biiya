@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Untuk BiiYa ✦</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="floating-hearts"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation Dots -->
+    <nav class="nav-dots" id="nav-dots">
+      <div class="nav-dot active" data-section="0">
+        <span class="tooltip">hello ✦</span>
+      </div>
+      <div class="nav-dot" data-section="1">
+        <span class="tooltip">live counter ✦</span>
+      </div>
+      <div class="nav-dot" data-section="2">
+        <span class="tooltip">wishes ✦</span>
+      </div>
+      <div class="nav-dot" data-section="3">
+        <span class="tooltip">photo ✦</span>
+      </div>
+      <div class="nav-dot" data-section="4">
+        <span class="tooltip">for you ✦</span>
+      </div>
+    </nav>
+
+    <!-- ═══════════ SECTION 1: HERO ═══════════ -->
+    <section class="section hero-section" id="sec-0">
+      <div class="section-inner visible" style="text-align: center">
+        <div class="pill-badge">Happy Birthday ✦</div>
+        <h1 class="main-title">BiiYa</h1>
+        <h2 class="hero-subtitle">Ini hadiah buat kamu</h2>
+
+        <div class="hero-envelope" id="hero-envelope">
+          <div class="envelope-body"></div>
+          <div class="envelope-seal">J</div>
+        </div>
+
+        <audio id="bgMusic" loop>
+          <source src="./assets/music.mp3" type="audio/mpeg" />
+        </audio>
+
+        <p class="hero-tap-hint" id="tap-hint">tap amplop ini ✦</p>
+
+        <div id="hero-reveal" style="display: none; margin-top: 1.5rem">
+          <p class="hero-greeting">
+            Hallo BiiYa ✦<br /><br />
+            Hari ini spesial buat kamu, aku ngga jago bikin kata-kata, jadi aku
+            buat halaman ini sebagai hadiah dihari ulang tahun kamu.
+          </p>
+          <p
+            style="
+              margin-top: 1.5rem;
+              font-size: 0.8rem;
+              color: var(--text-light);
+              letter-spacing: 1px;
+            "
+          >
+            ↓ scroll ke bawah ↓
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SECTION 2: LIVE COUNTER ═══════════ -->
+    <section class="section" id="sec-1">
+      <div class="section-inner">
+        <div class="glass-card counter-card">
+          <div class="pill-badge">⏱️ menghitung setiap detik</div>
+          <h2 class="main-title">Dari pertama kamu dilahirkan</h2>
+          <p class="cursive-text" style="font-size: 1.3rem; margin-top: 0.5rem">
+            18 Oktober 1999
+          </p>
+
+          <div class="counter-grid">
+            <div class="counter-item">
+              <span class="counter-number" id="c-years">0</span>
+              <div class="counter-label">Tahun</div>
+            </div>
+            <div class="counter-item">
+              <span class="counter-number" id="c-months">0</span>
+              <div class="counter-label">Bulan</div>
+            </div>
+            <div class="counter-item">
+              <span class="counter-number" id="c-days">0</span>
+              <div class="counter-label">Hari</div>
+            </div>
+          </div>
+
+          <div class="counter-sub">
+            <div class="counter-item">
+              <span class="counter-number" id="c-hours">0</span>
+              <div class="counter-label">Jam</div>
+            </div>
+            <div class="counter-item">
+              <span class="counter-number" id="c-minutes">0</span>
+              <div class="counter-label">Menit</div>
+            </div>
+            <div class="counter-item">
+              <span class="counter-number" id="c-seconds">0</span>
+              <div class="counter-label">Detik</div>
+            </div>
+          </div>
+
+          <p class="counter-since">
+            ...lebih dari
+            <span
+              id="c-heartbeats"
+              style="color: var(--pink-deep); font-weight: 700"
+              >0</span
+            >
+            detak jantung ✦
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SECTION 3: WISHES ═══════════ -->
+    <section class="section" id="sec-2">
+      <div class="section-inner">
+        <div style="text-align: center; margin-bottom: 1.5rem">
+          <div class="pill-badge">Wishes ✦</div>
+          <h2 class="main-title">
+            Semoga ini bisa menemani langkah kamu kedepannya
+          </h2>
+          <p class="cursive-text" style="font-size: 1.1rem">
+            klik setiap kotak untuk melihatnya ✦
+          </p>
+        </div>
+
+        <div class="things-grid">
+          <div class="thing-card" tabindex="0">
+            <div class="thing-inner">
+              <div class="thing-front">
+                <span>✨</span>
+                <span class="thing-front-label">tap me</span>
+              </div>
+              <div class="thing-back">
+                <p class="thing-back-text">
+                  Semoga senyum kamu selalu terjaga dan ada banyak alasan baru
+                  untuk tertawa.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="thing-card" tabindex="0">
+            <div class="thing-inner">
+              <div class="thing-front">
+                <span>✨</span>
+                <span class="thing-front-label">tap me</span>
+              </div>
+              <div class="thing-back">
+                <p class="thing-back-text">
+                  Semoga harapan yang selama ini kamu simpan, pelan-pelan
+                  terwujud.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="thing-card" tabindex="0">
+            <div class="thing-inner">
+              <div class="thing-front">
+                <span>✨</span>
+                <span class="thing-front-label">tap me</span>
+              </div>
+              <div class="thing-back">
+                <p class="thing-back-text">
+                  Semoga kamu selalu bertemu orang-orang tulus dan hal-hal yang
+                  membuat hati tenang.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="thing-card" tabindex="0">
+            <div class="thing-inner">
+              <div class="thing-front">
+                <span>✨</span>
+                <span class="thing-front-label">tap me</span>
+              </div>
+              <div class="thing-back">
+                <p class="thing-back-text">
+                  Semoga kamu selalu punya keberanian untuk terus mencoba
+                  hal-hal baru.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="thing-card" tabindex="0">
+            <div class="thing-inner">
+              <div class="thing-front">
+                <span>✨</span>
+                <span class="thing-front-label">tap me</span>
+              </div>
+              <div class="thing-back">
+                <p class="thing-back-text">
+                  Semoga kamu selalu punya waktu untuk diri sendiri, untuk
+                  menenangkan pikiran dan hati.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="thing-card" tabindex="0">
+            <div class="thing-inner">
+              <div class="thing-front">
+                <span>✨</span>
+                <span class="thing-front-label">tap me</span>
+              </div>
+              <div class="thing-back">
+                <p class="thing-back-text">
+                  Disini kosong, kamu isi sendiri yaa wish nya, biar aku
+                  aamiin-kan dari jauh xixixi
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SECTION 4: PHOTO ═══════════ -->
+    <section class="section" id="sec-3">
+      <div class="section-inner">
+        <div class="glass-card text-center">
+          <div class="pill-badge">photo ✦</div>
+          <h2 class="main-title">Happy Birthday!</h2>
+          <p
+            class="cursive-text"
+            style="font-size: 1.2rem; margin-top: 0.3rem"
+          ></p>
+
+          <div class="photo-frame-wrapper">
+            <div class="photo-frame">
+              <div class="photo-container">
+                <img
+                  id="memory-photo"
+                  src="./assets/image.jpg"
+                  alt="Our Memory"
+                  class="framed-photo"
+                  onerror="
+                    this.style.display = 'none';
+                    document.getElementById('photo-fallback').style.display =
+                      'flex';
+                  "
+                />
+                <div
+                  id="photo-fallback"
+                  class="photo-placeholder"
+                  style="display: none"
+                >
+                  <span class="placeholder-icon">📷</span>
+                  <span class="placeholder-title">Taruh Foto Kamu di Sini</span>
+                  <span class="placeholder-subtitle"
+                    >Simpan file gambar dengan nama <code>photo.jpg</code> di
+                    folder proyek ini</span
+                  >
+                </div>
+              </div>
+              <p class="photo-caption">BiiYa ✦</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SECTION 5: SURAT ═══════════ -->
+    <section class="section" id="sec-4">
+      <div class="section-inner">
+        <div class="glass-card">
+          <div style="text-align: center">
+            <span style="font-size: 1.4rem">✦</span>
+            <h2 class="main-title" style="margin: 0.5rem 0">
+              Surat Untuk Kamu
+            </h2>
+            <span style="font-size: 1.4rem">✦</span>
+          </div>
+
+          <div class="letter-content" style="margin-top: 2rem">
+            <p
+              class="cursive-text"
+              style="
+                font-size: 1.5rem;
+                color: var(--text-dark);
+                text-align: left;
+              "
+            >
+              Untuk BiiYa,
+            </p>
+
+            <p>
+              Surat ini aku tulis bulan September. Jujur, aku ngga tau nanti surat ini
+              bisa sampai tepat dihari ulang tahun kamu atau ngga. Kalau
+              ternyata terlambat, maaf yaa. Tapi aku tetap berusaha surat ini
+              bisa sampai ke kamu.
+            </p>
+
+            <p>
+              Barangkali ngga banyak yang menyadari sejauh apa kamu bertahan.
+              Maka ijinkan aku mengucapkannya lebih dulu: "Terima kasih telah
+              hidup sampai detik ini."
+            </p>
+
+            <p>
+              Entah seberat apapun beban di pundak kamu dan entah seberisik
+              apapun isi kepala kamu. Semoga Tuhan mampukan dan mudahkan
+              disetiap langkah dan prosesmu.
+            </p>
+
+            <p>
+              Bertepatan pada tanggal 18 Oktober, umur kamu bertambah satu tahun
+              lagi. Semoga di umur yang baru ini segala hal baik ikut
+              bertambah—kebahagiaan, kesehatan, rezeki dan semoga segala harapan
+              yang selama ini kamu simpan pelan-pelan bisa menjadi kenyataan.
+            </p>
+
+            <p>
+              Aku selalu berharap semoga kamu dikelilingi orang-orang baik,
+              dipertemukan dengan hal-hal baik dan dijauhkan dari segala hal
+              yang bisa membuat kamu sedih.
+            </p>
+
+            <p>
+              Aku ngga tau sejauh apa langkah hidup kamu kedepannya. Tapi satu
+              hal yang pasti, aku selalu mendoakan yang terbaikk buat kamuu.
+            </p>
+
+            <p class="letter-signature">
+              dengan sepenuh hati,<br />
+              Trixie ✦
+            </p>
+          </div>
+
+          <div style="text-align: center; margin-top: 2rem"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

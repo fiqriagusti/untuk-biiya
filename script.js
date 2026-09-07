@@ -17,7 +17,7 @@ envelope.addEventListener("click", () => {
 
 document.getElementById("hero-envelope").addEventListener("click", function () {
   const bgMusic = document.getElementById("bgMusic");
-  bgMusic.volume = 0.50;
+  bgMusic.volume = 0.45;
   bgMusic.play();
 });
 
